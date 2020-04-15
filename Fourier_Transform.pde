@@ -1,8 +1,8 @@
 Phasor[] fourierX;
 Phasor[] fourierY;
 ArrayList<PVector> path = new ArrayList<PVector>();
-float[] trainX;
-float[] trainY;
+float[] imageX;
+float[] imageY;
 float dt;
 float time = 0;
 int skip = 4;
@@ -11,8 +11,8 @@ int skip = 4;
 void setup() {
   size(1000, 800);
   loadImage();
-  fourierX = dft(trainX);
-  fourierY = dft(trainY);
+  fourierX = dft(imageX);
+  fourierY = dft(imageY);
   
   Sort(fourierX);
   Sort(fourierY);
@@ -49,13 +49,13 @@ void draw() {
 
 
 void loadImage() {
-  JSONArray train = loadJSONObject("Shrek xy outline - no face.json").getJSONArray("drawing");
-  trainX = new float[train.size()/skip];
-  trainY = new float[train.size()/skip];
+  JSONArray image = loadJSONObject("Shrek xy outline - no face.json").getJSONArray("drawing");
+  imageX = new float[image.size()/skip];
+  imageY = new float[iamge.size()/skip];
 
   for (int i = 0; i < train.size()/skip; i+= 1) {
-    trainX[i] = train.getJSONObject(i*skip).getFloat("x");
-    trainY[i] = train.getJSONObject(i*skip).getFloat("y");
+    imageX[i] = image.getJSONObject(i*skip).getFloat("x");
+    imageY[i] = image.getJSONObject(i*skip).getFloat("y");
   }
 }
 
