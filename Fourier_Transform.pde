@@ -10,7 +10,7 @@ int skip = 4;
 
 void setup() {
   size(1000, 800);
-  loadTrain();
+  loadImage();
   fourierX = dft(trainX);
   fourierY = dft(trainY);
   
@@ -48,7 +48,7 @@ void draw() {
 }
 
 
-void loadTrain() {
+void loadImage() {
   JSONArray train = loadJSONObject("Shrek xy outline - no face.json").getJSONArray("drawing");
   trainX = new float[train.size()/skip];
   trainY = new float[train.size()/skip];
