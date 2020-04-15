@@ -5,8 +5,8 @@ xCord = 0
 yCord = 0
 
 
-coordinateFile = "C:\\Users\\kyguy\\Desktop\\Make\Projects\\Discrete Fourier Transforms in PDE\\Shrek\\Shrek xy outline - no face.txt"
-JSONfile="C:\\Users\\kyguy\\Desktop\\Make\\Projects\\Discrete Fourier Transforms in PDE\\My changes\\Fourier_Transform\\Shrek xy outline - no face.json"
+coordinateFile = "PUT THE FILE TO BE CONVERT PATH HERE" #input
+JSONfile="PUT THE JSON FILE PATH HERE" #output
 
 
 def readFile():
